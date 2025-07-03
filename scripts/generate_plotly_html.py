@@ -6,8 +6,8 @@ import plotly.express as px
 OBJECTIVES = ["Subset size", "Accuracy", "DP", "EO"]
 
 # Input and output directories
-DATA_DIR = 'data'
-ONLINE_PLOTS_DIR = 'online_plots'
+DATA_DIR = '../data'
+ONLINE_PLOTS_DIR = '../online_plots'
 os.makedirs(ONLINE_PLOTS_DIR, exist_ok=True)
 
 # List of your dataset files (or iterate through DATA_DIR)
@@ -49,7 +49,7 @@ for filename in dataset_files:
         # Save the interactive HTML file
         fig.write_html(output_path, include_plotlyjs='cdn') # 'cdn' loads Plotly.js from a CDN
 
-        html_links.append(f'<li><a href="{html_filename}">{dataset_name.replace("_", " ").title()}</a></li>')
+        html_links.append(f'<li><a href="online_plots/{html_filename}">{dataset_name.replace("_", " ").title()}</a></li>')
         print(f"Successfully generated {html_filename}")
 
     except Exception as e:
@@ -80,8 +80,8 @@ index_html_content = f"""
     <ul>
         {''.join(html_links)}
     </ul>
-    <p>Return to <a href="https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME">GitHub Repository</a></p>
-    <p>Learn more about the research in the <a href="YOUR_THESIS_URL_IF_AVAILABLE">full thesis</a>.</p>
+    <p>Return to <a href="https://github.com/F-U-Njoku/MOFS-PCP">GitHub Repository</a></p>
+    <p>Learn more about the research in the <a href="https://www.sciencedirect.com/science/article/pii/S1568494625007227">full paper</a>.</p>
 </body>
 </html>
 """
