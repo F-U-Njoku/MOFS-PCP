@@ -1,4 +1,4 @@
-# Multi-Objective Feature Selection - Parallel Coordinate Plots
+# Many-Objective Feature Selection - Parallel Coordinate Plots
 
 ## Exploring Pareto Fronts on Fairness Datasets
 
